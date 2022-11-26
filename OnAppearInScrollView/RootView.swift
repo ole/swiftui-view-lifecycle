@@ -24,7 +24,13 @@ extension CaseStudy {
     )
     static let list: Self = .init(
         id: "list",
-        label: "List with dynamic content"
+        label: "List with dynamic content",
+        description: "List recycles views during scrolling, so onAppear gets called often. But List preserves the State for all list items."
+    )
+    static let tabView: Self = .init(
+        id: "tabview",
+        label: "TabView",
+        description: "TabView with multiple tabs, each with static content. Check if onAppear is called when switching between tabs"
     )
 }
 
@@ -42,6 +48,13 @@ let categories: [Category] = [
         label: "List",
         elements: [
             .list
+        ]
+    ),
+    Category(
+        id: "tabview",
+        label: "TabView",
+        elements: [
+            .tabView
         ]
     ),
 ]
@@ -67,7 +80,7 @@ struct Sidebar: View {
                 Section {
                     ForEach(section.elements) { caseStudy in
                         NavigationLink(value: caseStudy) {
-                            VStack(spacing: 8) {
+                            VStack(alignment: .leading, spacing: 8) {
                                 Text(caseStudy.label)
                                 if let description = caseStudy.description {
                                     Text(description)
@@ -101,6 +114,8 @@ struct Primary: View {
             CaseStudyScrollViewVStackForEach()
         case .list:
             CaseStudyList()
+        case .tabView:
+            CaseStudyTabView()
         default:
             Text("Unknown case study '\(caseStudy.label)'")
         }
