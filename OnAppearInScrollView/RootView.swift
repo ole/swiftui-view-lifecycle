@@ -1,8 +1,9 @@
 import SwiftUI
 
 enum CaseStudy: String, CaseIterable, Identifiable {
-    case scrollView = "ScrollView"
-    case list = "List"
+    case scrollView = "ScrollView with static content"
+    case scrollViewVStackForEach = "ScrollView > VStack > ForEach"
+    case list = "List with dynamic content"
 
     var id: Self {
         self
@@ -51,6 +52,8 @@ struct Primary: View {
         switch caseStudy {
         case .scrollView:
             CaseStudyScrollView()
+        case .scrollViewVStackForEach:
+            CaseStudyScrollViewVStackForEach()
         case .list:
             CaseStudyList()
         }
