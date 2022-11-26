@@ -2,6 +2,7 @@ import SwiftUI
 
 enum CaseStudy: String, CaseIterable, Identifiable {
     case scrollView = "ScrollView"
+    case list = "List"
 
     var id: Self {
         self
@@ -50,6 +51,8 @@ struct Primary: View {
         switch caseStudy {
         case .scrollView:
             CaseStudyScrollView()
+        case .list:
+            CaseStudyList()
         }
     }
 }

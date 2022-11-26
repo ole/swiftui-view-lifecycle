@@ -2,27 +2,38 @@ import SwiftUI
 
 struct OnAppearMonitor: View {
     var label: String
+    @State private var stateTimestamp: Date = Date.now
     @State private var onAppearTimestamp: Date? = nil
 
     var body: some View {
-        VStack {
+        Grid {
             Text(label)
-            ZStack {
-                if let t = onAppearTimestamp {
-                    Text("onAppear: \(t, style: .timer) ago")
-                        .monospacedDigit()
-                        .bold()
-                } else {
-                    Text("onAppear")
-                        .hidden()
-                }
+            GridRow {
+                Text("State reset")
+                    .gridColumnAlignment(.leading)
+                Text("\(stateTimestamp, style: .timer) ago")
+                    .monospacedDigit()
+                    .bold()
+                    .gridColumnAlignment(.leading)
             }
-            .animation(.easeOut(duration: 1), value: onAppearTimestamp)
+            GridRow {
+                Text("onAppear")
+                ZStack {
+                    if let t = onAppearTimestamp {
+                        Text("\(t, style: .timer) ago")
+                            .monospacedDigit()
+                            .bold()
+                    }
+                }
+                .animation(.easeOut(duration: 1), value: onAppearTimestamp)
+            }
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .foregroundStyle(.background)
-        .background { Capsule() }
+        .background {
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.random())
+        }
         .onAppear {
             let timestamp = Date.now
             print("\(timestamp) \(label): onAppear")
@@ -39,8 +50,17 @@ struct OnAppearMonitor_Previews: PreviewProvider {
         List {
             ForEach(1..<100) { i in
                 OnAppearMonitor(label: "\(i)")
-                    .foregroundStyle(.green)
             }
         }
+    }
+}
+
+extension Color {
+    static func random() -> Self {
+        Color(
+            red: .random(in: 0.5...0.9),
+            green: .random(in: 0.5...0.9),
+            blue: .random(in: 0.5...0.9)
+        )
     }
 }
