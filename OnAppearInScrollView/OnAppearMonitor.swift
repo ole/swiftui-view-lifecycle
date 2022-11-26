@@ -4,6 +4,7 @@ struct OnAppearMonitor: View {
     var label: String
     @State private var stateTimestamp: Date = Date.now
     @State private var onAppearTimestamp: Date? = nil
+    @State private var color: Color = .random()
 
     var body: some View {
         Grid {
@@ -32,7 +33,7 @@ struct OnAppearMonitor: View {
         .frame(maxWidth: .infinity)
         .background {
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.random())
+                .fill(color)
         }
         .onAppear {
             let timestamp = Date.now
