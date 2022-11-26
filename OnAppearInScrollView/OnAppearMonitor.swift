@@ -7,14 +7,17 @@ struct OnAppearMonitor: View {
     var body: some View {
         VStack {
             Text(label)
-            if let t = onAppearTimestamp {
-                Text("onAppear: \(t, style: .timer) ago")
-                    .monospacedDigit()
-                    .bold()
-            } else {
-                Text("onAppear")
-                    .hidden()
+            ZStack {
+                if let t = onAppearTimestamp {
+                    Text("onAppear: \(t, style: .timer) ago")
+                        .monospacedDigit()
+                        .bold()
+                } else {
+                    Text("onAppear")
+                        .hidden()
+                }
             }
+            .animation(.easeOut(duration: 1), value: onAppearTimestamp)
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -28,7 +31,6 @@ struct OnAppearMonitor: View {
         .onDisappear {
             print("\(Date.now) \(label): onDisappear")
         }
-        .animation(.easeOut(duration: 1), value: onAppearTimestamp)
     }
 }
 
