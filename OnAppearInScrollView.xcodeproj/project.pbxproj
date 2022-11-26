@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D305D20293240F300E42700 /* OnAppearMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D1F293240F300E42700 /* OnAppearMonitor.swift */; };
 		5D6C3F6C2908541100A0C864 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6B2908541100A0C864 /* App.swift */; };
 		5D6C3F6E2908541100A0C864 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6D2908541100A0C864 /* ContentView.swift */; };
 		5D6C3F702908541200A0C864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6F2908541200A0C864 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D305D1F293240F300E42700 /* OnAppearMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearMonitor.swift; sourceTree = "<group>"; };
 		5D6C3F682908541100A0C864 /* OnAppearInScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAppearInScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6C3F6B2908541100A0C864 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5D6C3F6D2908541100A0C864 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				5D6C3F6B2908541100A0C864 /* App.swift */,
 				5D6C3F6D2908541100A0C864 /* ContentView.swift */,
+				5D305D1F293240F300E42700 /* OnAppearMonitor.swift */,
 				5D6C3F6F2908541200A0C864 /* Assets.xcassets */,
 				5D6C3F712908541200A0C864 /* OnAppearInScrollView.entitlements */,
 				5D6C3F722908541200A0C864 /* Preview Content */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D305D20293240F300E42700 /* OnAppearMonitor.swift in Sources */,
 				5D6C3F6E2908541100A0C864 /* ContentView.swift in Sources */,
 				5D6C3F6C2908541100A0C864 /* App.swift in Sources */,
 			);
