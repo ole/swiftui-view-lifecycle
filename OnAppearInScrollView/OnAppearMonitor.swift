@@ -4,6 +4,7 @@ struct OnAppearMonitor: View {
     var label: String
     @State private var stateTimestamp: Date = Date.now
     @State private var onAppearTimestamp: Date? = nil
+    @State private var onDisappearTimestamp: Date? = nil
     @State private var color: Color = .random()
 
     var body: some View {
@@ -19,14 +20,24 @@ struct OnAppearMonitor: View {
             }
             GridRow {
                 Text("onAppear")
-                ZStack {
-                    if let t = onAppearTimestamp {
-                        Text("\(t, style: .timer) ago")
-                            .monospacedDigit()
-                            .bold()
-                    }
+                if let t = onAppearTimestamp {
+                    Text("\(t, style: .timer) ago")
+                        .monospacedDigit()
+                        .bold()
                 }
-                .animation(.easeOut(duration: 1), value: onAppearTimestamp)
+            }
+            GridRow {
+                Text("onDisappear")
+                let text: LocalizedStringKey = {
+                    if let t = onDisappearTimestamp {
+                        return "\(t, style: .timer) ago"
+                    } else {
+                        return "never"
+                    }
+                }()
+                Text(text)
+                        .monospacedDigit()
+                        .bold()
             }
         }
         .padding()
@@ -38,10 +49,16 @@ struct OnAppearMonitor: View {
         .onAppear {
             let timestamp = Date.now
             print("\(timestamp) \(label): onAppear")
-            onAppearTimestamp = timestamp
+            withAnimation(.easeOut(duration: 1)) {
+                onAppearTimestamp = timestamp
+            }
         }
         .onDisappear {
-            print("\(Date.now) \(label): onDisappear")
+            let timestamp = Date.now
+            print("\(timestamp) \(label): onDisappear")
+            withAnimation(.easeOut(duration: 1)) {
+                onDisappearTimestamp = timestamp
+            }
         }
     }
 }
