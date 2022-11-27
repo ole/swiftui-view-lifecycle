@@ -96,7 +96,9 @@ struct Sidebar: View {
             }
         }
         .navigationTitle("When is onAppear called?")
+        #if !os(macOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
         .navigationDestination(for: CaseStudy.self) { caseStudy in
             Primary(caseStudy: caseStudy)
         }
