@@ -22,13 +22,17 @@ extension CaseStudy {
         label: "ScrollView > VStack > ForEach",
         description: "A VStack with dynamic content, embedded in a ScrollView"
     )
+    static let staticList: Self = .init(
+        id: "staticList",
+        label: "List with static content"
+    )
     static let list: Self = .init(
         id: "list",
         label: "List with dynamic content",
         description: "List recycles views during scrolling, so onAppear gets called often. But List preserves the State for all list items."
     )
     static let tabView: Self = .init(
-        id: "tabview",
+        id: "tabView",
         label: "TabView",
         description: "TabView with multiple tabs, each with static content. Check if onAppear is called when switching between tabs"
     )
@@ -47,14 +51,15 @@ let categories: [Category] = [
         id: "list",
         label: "List",
         elements: [
-            .list
+            .staticList,
+            .list,
         ]
     ),
     Category(
         id: "tabview",
         label: "TabView",
         elements: [
-            .tabView
+            .tabView,
         ]
     ),
 ]
@@ -114,6 +119,8 @@ struct Primary: View {
             CaseStudyScrollView()
         case .scrollViewVStackForEach:
             CaseStudyScrollViewVStackForEach()
+        case .staticList:
+            CaseStudyStaticList()
         case .list:
             CaseStudyList()
         case .tabView:
