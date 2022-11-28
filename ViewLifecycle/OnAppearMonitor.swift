@@ -11,7 +11,7 @@ struct OnAppearMonitor: View {
         Grid {
             Text(label)
             GridRow {
-                Text("State reset")
+                Text("State created")
                     .gridColumnAlignment(.leading)
                 Text("\(stateTimestamp, style: .timer) ago")
                     .monospacedDigit()
