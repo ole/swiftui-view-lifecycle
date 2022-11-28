@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D0520B72934DC330080E4C0 /* CaseStudyStaticList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0520B62934DC330080E4C0 /* CaseStudyStaticList.swift */; };
+		5D0520B92934E6130080E4C0 /* CaseStudyLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */; };
 		5D305D20293240F300E42700 /* OnAppearMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D1F293240F300E42700 /* OnAppearMonitor.swift */; };
 		5D305D222932444500E42700 /* CaseStudyScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D212932444500E42700 /* CaseStudyScrollView.swift */; };
 		5D305D242932547F00E42700 /* CaseStudyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D232932547F00E42700 /* CaseStudyList.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		5D0520B62934DC330080E4C0 /* CaseStudyStaticList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyStaticList.swift; sourceTree = "<group>"; };
+		5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyLazyVGrid.swift; sourceTree = "<group>"; };
 		5D305D1F293240F300E42700 /* OnAppearMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAppearMonitor.swift; sourceTree = "<group>"; };
 		5D305D212932444500E42700 /* CaseStudyScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyScrollView.swift; sourceTree = "<group>"; };
 		5D305D232932547F00E42700 /* CaseStudyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyList.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5D6C3F6B2908541100A0C864 /* App.swift */,
+				5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */,
 				5D305D232932547F00E42700 /* CaseStudyList.swift */,
 				5D305D25293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift */,
 				5D305D212932444500E42700 /* CaseStudyScrollView.swift */,
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0520B92934E6130080E4C0 /* CaseStudyLazyVGrid.swift in Sources */,
 				5D0520B72934DC330080E4C0 /* CaseStudyStaticList.swift in Sources */,
 				5D305D2A293266D000E42700 /* CaseStudyTabView.swift in Sources */,
 				5D305D28293260EC00E42700 /* Model.swift in Sources */,

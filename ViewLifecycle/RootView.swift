@@ -31,6 +31,10 @@ extension CaseStudy {
         label: "List with dynamic content",
         description: "List recycles views during scrolling, so onAppear gets called often. But List preserves the State for all list items."
     )
+    static let lazyVGrid: Self = .init(
+        id: "lazyVGrid",
+        label: "LazyVGrid"
+    )
     static let tabView: Self = .init(
         id: "tabView",
         label: "TabView",
@@ -56,7 +60,14 @@ let categories: [Category] = [
         ]
     ),
     Category(
-        id: "tabview",
+        id: "lazy",
+        label: "Lazy Containers",
+        elements: [
+            .lazyVGrid,
+        ]
+    ),
+    Category(
+        id: "tabView",
         label: "TabView",
         elements: [
             .tabView,
@@ -123,6 +134,8 @@ struct Primary: View {
             CaseStudyStaticList()
         case .list:
             CaseStudyList()
+        case .lazyVGrid:
+            CaseStudyLazyVGrid()
         case .tabView:
             CaseStudyTabView()
         default:
