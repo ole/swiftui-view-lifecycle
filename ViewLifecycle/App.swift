@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct OnAppearInScrollViewApp: App {
+struct ViewLifecycleApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()

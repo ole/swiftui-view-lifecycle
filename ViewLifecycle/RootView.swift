@@ -95,7 +95,7 @@ struct Sidebar: View {
                 }
             }
         }
-        .navigationTitle("When is onAppear called?")
+        .navigationTitle("SwiftUI View Lifecycle")
         #if !os(macOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif

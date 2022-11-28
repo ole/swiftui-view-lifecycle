@@ -26,11 +26,11 @@
 		5D305D25293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseStudyScrollViewVStackForEach.swift; sourceTree = "<group>"; };
 		5D305D27293260EC00E42700 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5D305D29293266D000E42700 /* CaseStudyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyTabView.swift; sourceTree = "<group>"; };
-		5D6C3F682908541100A0C864 /* OnAppearInScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAppearInScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D6C3F682908541100A0C864 /* ViewLifecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLifecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6C3F6B2908541100A0C864 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5D6C3F6D2908541100A0C864 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5D6C3F6F2908541200A0C864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5D6C3F712908541200A0C864 /* OnAppearInScrollView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnAppearInScrollView.entitlements; sourceTree = "<group>"; };
+		5D6C3F712908541200A0C864 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		5D6C3F732908541200A0C864 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +48,7 @@
 		5D6C3F5F2908541100A0C864 = {
 			isa = PBXGroup;
 			children = (
-				5D6C3F6A2908541100A0C864 /* OnAppearInScrollView */,
+				5D6C3F6A2908541100A0C864 /* ViewLifecycle */,
 				5D6C3F692908541100A0C864 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +56,12 @@
 		5D6C3F692908541100A0C864 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D6C3F682908541100A0C864 /* OnAppearInScrollView.app */,
+				5D6C3F682908541100A0C864 /* ViewLifecycle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D6C3F6A2908541100A0C864 /* OnAppearInScrollView */ = {
+		5D6C3F6A2908541100A0C864 /* ViewLifecycle */ = {
 			isa = PBXGroup;
 			children = (
 				5D6C3F6B2908541100A0C864 /* App.swift */,
@@ -73,10 +73,10 @@
 				5D305D1F293240F300E42700 /* OnAppearMonitor.swift */,
 				5D6C3F6D2908541100A0C864 /* RootView.swift */,
 				5D6C3F6F2908541200A0C864 /* Assets.xcassets */,
-				5D6C3F712908541200A0C864 /* OnAppearInScrollView.entitlements */,
+				5D6C3F712908541200A0C864 /* Entitlements.entitlements */,
 				5D6C3F722908541200A0C864 /* Preview Content */,
 			);
-			path = OnAppearInScrollView;
+			path = ViewLifecycle;
 			sourceTree = "<group>";
 		};
 		5D6C3F722908541200A0C864 /* Preview Content */ = {
@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D6C3F672908541100A0C864 /* OnAppearInScrollView */ = {
+		5D6C3F672908541100A0C864 /* ViewLifecycle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5D6C3F772908541200A0C864 /* Build configuration list for PBXNativeTarget "OnAppearInScrollView" */;
+			buildConfigurationList = 5D6C3F772908541200A0C864 /* Build configuration list for PBXNativeTarget "ViewLifecycle" */;
 			buildPhases = (
 				5D6C3F642908541100A0C864 /* Sources */,
 				5D6C3F652908541100A0C864 /* Frameworks */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = OnAppearInScrollView;
+			name = ViewLifecycle;
 			productName = OnAppearInScrollView;
-			productReference = 5D6C3F682908541100A0C864 /* OnAppearInScrollView.app */;
+			productReference = 5D6C3F682908541100A0C864 /* ViewLifecycle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5D6C3F632908541100A0C864 /* Build configuration list for PBXProject "OnAppearInScrollView" */;
+			buildConfigurationList = 5D6C3F632908541100A0C864 /* Build configuration list for PBXProject "ViewLifecycle" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5D6C3F672908541100A0C864 /* OnAppearInScrollView */,
+				5D6C3F672908541100A0C864 /* ViewLifecycle */,
 			);
 		};
 /* End PBXProject section */
@@ -285,10 +285,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = OnAppearInScrollView/OnAppearInScrollView.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ViewLifecycle/Entitlements.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OnAppearInScrollView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ViewLifecycle/Preview Content\"";
 				DEVELOPMENT_TEAM = UQBP8YQ495;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -308,7 +308,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.oleb.OnAppearInScrollView;
+				PRODUCT_BUNDLE_IDENTIFIER = net.oleb.ViewLifecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -323,10 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = OnAppearInScrollView/OnAppearInScrollView.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ViewLifecycle/Entitlements.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OnAppearInScrollView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ViewLifecycle/Preview Content\"";
 				DEVELOPMENT_TEAM = UQBP8YQ495;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -346,7 +346,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.oleb.OnAppearInScrollView;
+				PRODUCT_BUNDLE_IDENTIFIER = net.oleb.ViewLifecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -359,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5D6C3F632908541100A0C864 /* Build configuration list for PBXProject "OnAppearInScrollView" */ = {
+		5D6C3F632908541100A0C864 /* Build configuration list for PBXProject "ViewLifecycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D6C3F752908541200A0C864 /* Debug */,
@@ -368,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5D6C3F772908541200A0C864 /* Build configuration list for PBXNativeTarget "OnAppearInScrollView" */ = {
+		5D6C3F772908541200A0C864 /* Build configuration list for PBXNativeTarget "ViewLifecycle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5D6C3F782908541200A0C864 /* Debug */,
