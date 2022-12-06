@@ -64,8 +64,14 @@ struct MainContent: View {
         case .tabView:
             CaseStudyTabView()
         default:
-            Text("Unknown case study '\(caseStudy.label)'")
+            unknownCase
         }
+    }
+
+    @ViewBuilder private var unknownCase: some View {
+        Text("Unhandled case study `\(caseStudy.label)`. Did you forget to add a case to `\(String(describing: type(of: self)))`?")
+            .padding()
+            .navigationTitle("Error")
     }
 }
 
