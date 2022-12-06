@@ -3,43 +3,38 @@ import SwiftUI
 /// A view that records and displays its lifecycle events.
 struct LifecycleMonitor: View {
     var label: String
-    @State private var stateTimestamp: Date = Date.now
+    @State private var stateTimestamp: Date = .now
     @State private var onAppearTimestamp: Date? = nil
     @State private var onDisappearTimestamp: Date? = nil
     @State private var color: Color = .random()
 
     var body: some View {
-        Grid {
+        VStack(spacing: 16) {
             Text(label)
-            GridRow {
-                Text("State created")
-                    .gridColumnAlignment(.leading)
-                Text("\(stateTimestamp, style: .timer) ago")
-                    .monospacedDigit()
-                    .bold()
-                    .gridColumnAlignment(.leading)
-            }
-            GridRow {
-                Text("onAppear")
-                if let t = onAppearTimestamp {
-                    Text("\(t, style: .timer) ago")
+                .font(.title3)
+            Grid(horizontalSpacing: 16) {
+                GridRow {
+                    Text("@State")
+                        .gridColumnAlignment(.leading)
+                    Text("\(stateTimestamp, style: .timer) ago")
                         .monospacedDigit()
-                        .bold()
+                        .gridColumnAlignment(.leading)
+                }
+                GridRow {
+                    Text("onAppear")
+                    Text(timestampLabel(for: onAppearTimestamp))
+                        .opacity(onAppearTimestamp == nil ? 0 : 1)
+                        .monospacedDigit()
+                        .animation(.easeOut(duration: 1), value: onAppearTimestamp)
+                }
+                GridRow {
+                    Text("onDisappear")
+                    Text(timestampLabel(for: onDisappearTimestamp))
+                        .monospacedDigit()
+                        .animation(.easeOut(duration: 1), value: onDisappearTimestamp)
                 }
             }
-            GridRow {
-                Text("onDisappear")
-                let text: LocalizedStringKey = {
-                    if let t = onDisappearTimestamp {
-                        return "\(t, style: .timer) ago"
-                    } else {
-                        return "never"
-                    }
-                }()
-                Text(text)
-                        .monospacedDigit()
-                        .bold()
-            }
+            .font(.callout)
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -50,16 +45,20 @@ struct LifecycleMonitor: View {
         .onAppear {
             let timestamp = Date.now
             print("\(timestamp) \(label): onAppear")
-            withAnimation(.easeOut(duration: 1)) {
-                onAppearTimestamp = timestamp
-            }
+            onAppearTimestamp = timestamp
         }
         .onDisappear {
             let timestamp = Date.now
             print("\(timestamp) \(label): onDisappear")
-            withAnimation(.easeOut(duration: 1)) {
-                onDisappearTimestamp = timestamp
-            }
+            onDisappearTimestamp = timestamp
+        }
+    }
+
+    private func timestampLabel(for timestamp: Date?) -> LocalizedStringKey {
+        if let t = timestamp {
+            return "\(t, style: .timer) ago"
+        } else {
+            return "not yet"
         }
     }
 }
