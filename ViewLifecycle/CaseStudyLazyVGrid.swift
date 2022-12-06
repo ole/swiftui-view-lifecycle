@@ -8,7 +8,7 @@ struct CaseStudyLazyVGrid: View {
             LazyVGrid(columns: [.init(.adaptive(minimum: 280))]) {
                 ForEach(items) { item in
                     let label = String(item.id.uuidString.prefix(8))
-                    OnAppearMonitor(label: label)
+                    LifecycleMonitor(label: label)
                 }
             }
         }

@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct OnAppearMonitor: View {
+/// A view that records and displays its lifecycle events.
+struct LifecycleMonitor: View {
     var label: String
     @State private var stateTimestamp: Date = Date.now
     @State private var onAppearTimestamp: Date? = nil
@@ -63,11 +64,11 @@ struct OnAppearMonitor: View {
     }
 }
 
-struct OnAppearMonitor_Previews: PreviewProvider {
+struct LifecycleMonitor_Previews: PreviewProvider {
     static var previews: some View {
         List {
             ForEach(1..<100) { i in
-                OnAppearMonitor(label: "\(i)")
+                LifecycleMonitor(label: "\(i)")
             }
         }
     }

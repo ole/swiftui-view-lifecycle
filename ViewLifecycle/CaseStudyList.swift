@@ -7,7 +7,7 @@ struct CaseStudyList: View {
         List {
             ForEach(items) { item in
                 let label = String(item.id.uuidString.prefix(8))
-                OnAppearMonitor(label: label)
+                LifecycleMonitor(label: label)
             }
             .onDelete { offsets in
                 items.remove(atOffsets: offsets)

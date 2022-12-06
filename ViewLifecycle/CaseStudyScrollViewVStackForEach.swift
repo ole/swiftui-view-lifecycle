@@ -9,7 +9,7 @@ struct CaseStudyScrollViewVStackForEach: View {
                 ForEach(items) { item in
                     HStack {
                         let label = String(item.id.uuidString.prefix(8))
-                        OnAppearMonitor(label: label)
+                        LifecycleMonitor(label: label)
                         Button(role: .destructive) {
                             if let idx = items.firstIndex(where: { $0.id == item.id }) {
                                 items.remove(at: idx)

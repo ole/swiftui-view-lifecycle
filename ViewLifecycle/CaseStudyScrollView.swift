@@ -3,7 +3,7 @@ import SwiftUI
 struct CaseStudyScrollView: View {
     var body: some View {
         ScrollView {
-            OnAppearMonitor(label: "ScrollView top")
+            LifecycleMonitor(label: "ScrollView top")
 
             VStack {
                 Image(systemName: "arrow.down.circle.fill")
@@ -14,7 +14,7 @@ struct CaseStudyScrollView: View {
 
             Spacer(minLength: 2000)
 
-            OnAppearMonitor(label: "ScrollView bottom")
+            LifecycleMonitor(label: "ScrollView bottom")
         }
         .navigationTitle("ScrollView")
     }
