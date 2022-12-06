@@ -51,6 +51,8 @@ struct MainContent: View {
 
     var body: some View {
         switch caseStudy {
+        case .ifElse:
+            CaseStudyIfElse()
         case .scrollView:
             CaseStudyScrollView()
         case .scrollViewVStackForEach:

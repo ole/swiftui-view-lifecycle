@@ -11,6 +11,10 @@ struct CaseStudy: Identifiable, Hashable {
 }
 
 extension CaseStudy {
+    static let ifElse: Self = .init(
+        id: "ifElse",
+        label: "if/else"
+    )
     static let scrollView: Self = .init(
         id: "scrollView",
         label: "ScrollView with static content"
@@ -41,6 +45,13 @@ extension CaseStudy {
 }
 
 let categories: [Category] = [
+    Category(
+        id: "simple",
+        label: "Simple views",
+        elements: [
+            .ifElse,
+        ]
+    ),
     Category(
         id: "scrollview",
         label: "ScrollView",

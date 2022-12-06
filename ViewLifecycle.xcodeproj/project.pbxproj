@@ -16,6 +16,7 @@
 		5D305D28293260EC00E42700 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D27293260EC00E42700 /* SampleModel.swift */; };
 		5D305D2A293266D000E42700 /* CaseStudyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D29293266D000E42700 /* CaseStudyTabView.swift */; };
 		5D60F905293FA5F400AE0726 /* CaseStudies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60F904293FA5F400AE0726 /* CaseStudies.swift */; };
+		5D60F907293FA8D400AE0726 /* CaseStudyIfElse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60F906293FA8D400AE0726 /* CaseStudyIfElse.swift */; };
 		5D6C3F6C2908541100A0C864 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6B2908541100A0C864 /* App.swift */; };
 		5D6C3F6E2908541100A0C864 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6D2908541100A0C864 /* RootView.swift */; };
 		5D6C3F702908541200A0C864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6F2908541200A0C864 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		5D305D27293260EC00E42700 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		5D305D29293266D000E42700 /* CaseStudyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyTabView.swift; sourceTree = "<group>"; };
 		5D60F904293FA5F400AE0726 /* CaseStudies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudies.swift; sourceTree = "<group>"; };
+		5D60F906293FA8D400AE0726 /* CaseStudyIfElse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyIfElse.swift; sourceTree = "<group>"; };
 		5D6C3F682908541100A0C864 /* ViewLifecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewLifecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6C3F6B2908541100A0C864 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5D6C3F6D2908541100A0C864 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				5D6C3F6B2908541100A0C864 /* App.swift */,
 				5D60F904293FA5F400AE0726 /* CaseStudies.swift */,
+				5D60F906293FA8D400AE0726 /* CaseStudyIfElse.swift */,
 				5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */,
 				5D305D232932547F00E42700 /* CaseStudyList.swift */,
 				5D305D25293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift */,
@@ -171,6 +174,7 @@
 				5D305D2A293266D000E42700 /* CaseStudyTabView.swift in Sources */,
 				5D305D28293260EC00E42700 /* SampleModel.swift in Sources */,
 				5D305D26293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift in Sources */,
+				5D60F907293FA8D400AE0726 /* CaseStudyIfElse.swift in Sources */,
 				5D305D222932444500E42700 /* CaseStudyScrollView.swift in Sources */,
 				5D305D242932547F00E42700 /* CaseStudyList.swift in Sources */,
 				5D305D20293240F300E42700 /* LifecycleMonitor.swift in Sources */,
