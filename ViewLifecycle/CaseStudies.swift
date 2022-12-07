@@ -52,7 +52,7 @@ extension CaseStudy {
     static let tabView: Self = .init(
         id: "tabView",
         label: "TabView",
-        description: "TabView with multiple tabs, each with static content. Check if onAppear is called when switching between tabs"
+        description: "TabView with multiple tabs, each with static content."
     )
 }
 

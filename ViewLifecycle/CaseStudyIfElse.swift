@@ -15,13 +15,14 @@ struct CaseStudyIfElse: View {
             }
             Text(explanation)
                 .font(.callout)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
         .navigationTitle("if/else")
     }
 
     private var explanation: LocalizedStringKey {
-        "Toggling the switch toggles between the true and false branches of an `if`/`else` condition. Observe that the view is destroyed on every toggle."
+        "Toggling the switch toggles between the true and false branches of an `if`/`else` statement. Observe that the view is destroyed on every toggle."
     }
 }
 
