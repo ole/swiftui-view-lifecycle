@@ -19,6 +19,7 @@ struct CaseStudy: Identifiable, Equatable {
         case navigationStack
         case scrollViewDynamic
         case scrollViewStatic
+        case `switch`
         case tabView
     }
 }
@@ -29,6 +30,7 @@ let categories: [Category] = [
         label: "Simple views",
         elements: [
             CaseStudy(id: .ifElse, label: "if/else"),
+            CaseStudy(id: .switch, label: "switch"),
         ]
     ),
     Category(

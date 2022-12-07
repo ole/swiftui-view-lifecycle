@@ -55,6 +55,8 @@ struct MainContent: View {
         switch caseStudyID {
         case .ifElse:
             CaseStudyIfElse()
+        case .switch:
+            CaseStudySwitch()
         case .scrollViewStatic:
             CaseStudyScrollViewStatic()
         case .scrollViewDynamic:
