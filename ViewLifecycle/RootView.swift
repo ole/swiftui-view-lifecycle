@@ -20,7 +20,7 @@ struct Sidebar: View {
             ForEach(categories) { section in
                 Section {
                     ForEach(section.elements) { caseStudy in
-                        NavigationLink(value: caseStudy) {
+                        NavigationLink(value: caseStudy.id) {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(caseStudy.label)
                                     .lineLimit(nil)
@@ -42,17 +42,17 @@ struct Sidebar: View {
         #if !os(macOS)
         .navigationBarTitleDisplayMode(.inline)
         #endif
-        .navigationDestination(for: CaseStudy.self) { caseStudy in
-            MainContent(caseStudy: caseStudy)
+        .navigationDestination(for: CaseStudy.ID.self) { id in
+            MainContent(caseStudyID: id)
         }
     }
 }
 
 struct MainContent: View {
-    var caseStudy: CaseStudy
+    var caseStudyID: CaseStudy.ID
 
     var body: some View {
-        switch caseStudy {
+        switch caseStudyID {
         case .ifElse:
             CaseStudyIfElse()
         case .scrollView:
@@ -73,15 +73,7 @@ struct MainContent: View {
             #endif
         case .tabView:
             CaseStudyTabView()
-        default:
-            unknownCase
         }
-    }
-
-    @ViewBuilder private var unknownCase: some View {
-        Text("Unhandled case study `\(caseStudy.label)`. Did you forget to add a case to `\(String(describing: type(of: self)))`?")
-            .padding()
-            .navigationTitle("Error")
     }
 }
 
