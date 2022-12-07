@@ -63,6 +63,8 @@ struct MainContent: View {
             CaseStudyList()
         case .lazyVGrid:
             CaseStudyLazyVGrid()
+        case .navigationStack:
+            CaseStudyNavigationStack()
         case .tabView:
             CaseStudyTabView()
         default:

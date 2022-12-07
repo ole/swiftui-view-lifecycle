@@ -15,28 +15,40 @@ extension CaseStudy {
         id: "ifElse",
         label: "if/else"
     )
+
     static let scrollView: Self = .init(
         id: "scrollView",
         label: "ScrollView with static content"
     )
+
     static let scrollViewVStackForEach: Self = .init(
         id: "scrollViewVStackForEach",
         label: "ScrollView > VStack > ForEach",
         description: "A VStack with dynamic content, embedded in a ScrollView"
     )
+
     static let staticList: Self = .init(
         id: "staticList",
         label: "List with static content"
     )
+
     static let list: Self = .init(
         id: "list",
         label: "List with dynamic content",
         description: "List recycles views during scrolling, so onAppear gets called often. But List preserves the State for all list items."
     )
+
     static let lazyVGrid: Self = .init(
         id: "lazyVGrid",
         label: "LazyVGrid"
     )
+
+    static let navigationStack: Self = .init(
+        id: "navigationStack",
+        label: "NavigationStack",
+        description: "A NavigationStack with infinite levels of drill-down."
+    )
+
     static let tabView: Self = .init(
         id: "tabView",
         label: "TabView",
@@ -70,15 +82,16 @@ let categories: [Category] = [
     ),
     Category(
         id: "lazy",
-        label: "Lazy Containers",
+        label: "Lazy containers",
         elements: [
             .lazyVGrid,
         ]
     ),
     Category(
-        id: "tabView",
-        label: "TabView",
+        id: "navigation",
+        label: "Navigation containers",
         elements: [
+            .navigationStack,
             .tabView,
         ]
     ),
