@@ -38,8 +38,8 @@ let categories: [Category] = [
             CaseStudy(id: .scrollView, label: "ScrollView with static content"),
             CaseStudy(
                 id: .scrollViewVStackForEach,
-                label: "ScrollView with ForEach",
-                description: "A VStack with dynamic content, embedded in a ScrollView"
+                label: "ScrollView with dynamic content",
+                description: "A VStack with dynamic content, embedded in a ScrollView."
             ),
         ]
     ),
@@ -47,14 +47,11 @@ let categories: [Category] = [
         id: "list",
         label: "List",
         elements: [
+            CaseStudy(id: .list, label: "List with dynamic content"),
             CaseStudy(
                 id: .staticList,
-                label: "List with static content"
-            ),
-            CaseStudy(
-                id: .list,
-                label: "List with dynamic content",
-                description: "List recycles views during scrolling, so onAppear gets called often. But List preserves the State for all list items."
+                label: "List with static content",
+                description: "A List with a bunch of hardcoded child views, not using ForEach."
             ),
         ]
     ),

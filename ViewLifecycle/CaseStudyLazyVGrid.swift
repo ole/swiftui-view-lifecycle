@@ -1,33 +1,54 @@
 import SwiftUI
 
 struct CaseStudyLazyVGrid: View {
-    @State private var items: [Item] = sampleItems
+    private static let initialItemCount = 40
+    @State private var items: [Item] = (1...Self.initialItemCount).map { i in
+        Item(id: "Item \(i)")
+    }
+    @State private var nextID: Int = Self.initialItemCount + 1
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [.init(.adaptive(minimum: 280))]) {
+            LazyVGrid(columns: [.init(.adaptive(minimum: 150))]) {
                 ForEach(items) { item in
-                    let label = String(item.id.uuidString.prefix(8))
-                    LifecycleMonitor(label: label)
+                    VStack(spacing: 4) {
+                        LifecycleMonitor(label: item.id)
+                        Button(role: .destructive) {
+                            if let idx = items.firstIndex(where: { $0.id == item.id }) {
+                                items.remove(at: idx)
+                            }
+                        } label: {
+                            Label("Delete", systemImage: "minus.circle")
+                        }
+                    }
+                    .padding(4)
                 }
             }
         }
-        .navigationTitle("LazyVGrid")
+        .safeAreaInset(edge: .bottom) {
+            Text("`LazyVGrid` behaves very much like `List`, recycling views during scrolling, so `onAppear` gets called often. But the state gets preserved for all child views.")
+                .font(.callout)
+                .padding()
+                .background(.regularMaterial)
+        }
         .toolbar {
             ToolbarItem {
                 Button("Prepend") {
-                    let newItem = Item(id: UUID())
+                    let newItem = Item(id: "Item \(nextID)")
+                    nextID += 1
                     items.insert(newItem, at: 0)
                 }
             }
             ToolbarItem {
                 Button("Append") {
-                    let newItem = Item(id: UUID())
+                    let newItem = Item(id: "Item \(nextID)")
+                    nextID += 1
                     items.append(newItem)
                 }
             }
         }
         .animation(.default, value: items)
+        .navigationTitle("LazyVGrid")
     }
 }
 

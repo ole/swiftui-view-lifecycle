@@ -16,7 +16,7 @@ struct LifecycleMonitor: View {
                 GridRow {
                     Text("@State")
                         .gridColumnAlignment(.leading)
-                    Text("\(stateTimestamp, style: .timer) ago")
+                    Text("\(stateTimestamp, style: .timer)")
                         .monospacedDigit()
                         .gridColumnAlignment(.leading)
                 }
@@ -56,9 +56,9 @@ struct LifecycleMonitor: View {
 
     private func timestampLabel(for timestamp: Date?) -> LocalizedStringKey {
         if let t = timestamp {
-            return "\(t, style: .timer) ago"
+            return "\(t, style: .timer)"
         } else {
-            return "not yet"
+            return "never"
         }
     }
 }

@@ -13,16 +13,12 @@ struct CaseStudyIfElse: View {
             } else {
                 LifecycleMonitor(label: "off")
             }
-            Text(explanation)
+            Text("Toggling the switch toggles between the true and false branches of an `if`/`else` statement. Observe that the view is destroyed on every toggle.")
                 .font(.callout)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
         .navigationTitle("if/else")
-    }
-
-    private var explanation: LocalizedStringKey {
-        "Toggling the switch toggles between the true and false branches of an `if`/`else` statement. Observe that the view is destroyed on every toggle."
     }
 }
 

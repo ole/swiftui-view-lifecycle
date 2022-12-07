@@ -5,7 +5,7 @@ struct CaseStudyScrollView: View {
         ScrollView {
             LifecycleMonitor(label: "ScrollView top")
 
-            Text(explanation)
+            Text("Nesting views in a ScrollView has no effect on those views’ lifecycle events. The entire content of the scroll view appears immediately when the scroll view appears, regardless of whether it’s on screen or not.")
                 .font(.callout)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
@@ -22,10 +22,6 @@ struct CaseStudyScrollView: View {
             LifecycleMonitor(label: "ScrollView bottom")
         }
         .navigationTitle("ScrollView")
-    }
-
-    private var explanation: LocalizedStringKey {
-        "Nesting views in a ScrollView has no effect on those views’ lifecycle events. The entire content of the scroll view appears immediately when the scroll view appears, regardless of whether it’s on screen or not."
     }
 }
 

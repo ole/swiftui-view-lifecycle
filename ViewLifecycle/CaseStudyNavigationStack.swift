@@ -20,7 +20,7 @@ struct CaseStudyNavigationStack: View {
                     }
                 } footer: {
                     if level == 1 {
-                        Text(explanation)
+                        Text("Navigation views keep the state of content views on the navigation stack alive. `onAppear` and `onDisappear` get called as you navigate. Popping a view off the stack ends the view's lifetime, destroying its state.")
                             .font(.callout)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -28,10 +28,6 @@ struct CaseStudyNavigationStack: View {
             }
             .listStyle(.plain)
             .navigationTitle(level == 1 ? "NavigationStack" : "Level \(level)")
-        }
-
-        private var explanation: LocalizedStringKey {
-            "Navigation views keep the state of content views on the navigation stack alive. `onAppear` and `onDisappear` get called as you navigate. Popping a view off the stack ends the view's lifetime, destroying its state."
         }
     }
 }
