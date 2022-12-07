@@ -21,7 +21,7 @@ struct Sidebar: View {
                 Section {
                     ForEach(section.elements) { caseStudy in
                         NavigationLink(value: caseStudy) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: 4) {
                                 Text(caseStudy.label)
                                     .lineLimit(nil)
                                 if let description = caseStudy.description {
