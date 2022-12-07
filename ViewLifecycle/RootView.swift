@@ -23,10 +23,12 @@ struct Sidebar: View {
                         NavigationLink(value: caseStudy) {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text(caseStudy.label)
+                                    .lineLimit(nil)
                                 if let description = caseStudy.description {
                                     Text(description)
                                         .font(.callout)
                                         .foregroundStyle(.secondary)
+                                        .lineLimit(nil)
                                 }
                             }
                         }
