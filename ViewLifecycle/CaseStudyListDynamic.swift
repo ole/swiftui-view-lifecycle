@@ -20,6 +20,7 @@ struct CaseStudyListDynamic: View {
             Text("`List` recycles views during scrolling, so `onAppear` gets called often. But `List` preserves the state for all list items.")
                 .font(.callout)
                 .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.regularMaterial)
         }
         .toolbar {

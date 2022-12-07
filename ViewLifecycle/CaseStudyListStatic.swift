@@ -44,6 +44,7 @@ struct CaseStudyListStatic: View {
             Text("Lists with static content recycle their child views too. They behave like dynamic lists.")
                 .font(.callout)
                 .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.regularMaterial)
         }
         .navigationTitle("List")

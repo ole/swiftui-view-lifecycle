@@ -30,6 +30,7 @@ struct CaseStudyScrollViewDynamic: View {
             Text("Unlike `List`, a `ScrollView` has no effect on its content views’ lifecycle, even if those content views are created dynamically with `ForEach`. All children appear at once and never disappear, even if they’re not on screen initially.")
                 .font(.callout)
                 .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.regularMaterial)
         }
         .toolbar {

@@ -29,6 +29,7 @@ struct CaseStudyLazyVGrid: View {
             Text("`LazyVGrid` behaves very much like `List`, recycling views during scrolling, so `onAppear` gets called often. But the state gets preserved for all child views.")
                 .font(.callout)
                 .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.regularMaterial)
         }
         .toolbar {
