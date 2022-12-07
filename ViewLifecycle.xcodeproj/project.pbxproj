@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D0520B72934DC330080E4C0 /* CaseStudyStaticList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0520B62934DC330080E4C0 /* CaseStudyStaticList.swift */; };
+		5D0520B72934DC330080E4C0 /* CaseStudyListStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0520B62934DC330080E4C0 /* CaseStudyListStatic.swift */; };
 		5D0520B92934E6130080E4C0 /* CaseStudyLazyVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */; };
 		5D305D20293240F300E42700 /* LifecycleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D1F293240F300E42700 /* LifecycleMonitor.swift */; };
-		5D305D222932444500E42700 /* CaseStudyScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D212932444500E42700 /* CaseStudyScrollView.swift */; };
-		5D305D242932547F00E42700 /* CaseStudyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D232932547F00E42700 /* CaseStudyList.swift */; };
-		5D305D26293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D25293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift */; };
+		5D305D222932444500E42700 /* CaseStudyScrollViewStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D212932444500E42700 /* CaseStudyScrollViewStatic.swift */; };
+		5D305D242932547F00E42700 /* CaseStudyListDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D232932547F00E42700 /* CaseStudyListDynamic.swift */; };
+		5D305D26293260BE00E42700 /* CaseStudyScrollViewDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D25293260BE00E42700 /* CaseStudyScrollViewDynamic.swift */; };
 		5D305D28293260EC00E42700 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D27293260EC00E42700 /* SampleModel.swift */; };
 		5D305D2A293266D000E42700 /* CaseStudyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D305D29293266D000E42700 /* CaseStudyTabView.swift */; };
 		5D60F905293FA5F400AE0726 /* CaseStudies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60F904293FA5F400AE0726 /* CaseStudies.swift */; };
@@ -25,12 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D0520B62934DC330080E4C0 /* CaseStudyStaticList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyStaticList.swift; sourceTree = "<group>"; };
+		5D0520B62934DC330080E4C0 /* CaseStudyListStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyListStatic.swift; sourceTree = "<group>"; };
 		5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyLazyVGrid.swift; sourceTree = "<group>"; };
 		5D305D1F293240F300E42700 /* LifecycleMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleMonitor.swift; sourceTree = "<group>"; };
-		5D305D212932444500E42700 /* CaseStudyScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyScrollView.swift; sourceTree = "<group>"; };
-		5D305D232932547F00E42700 /* CaseStudyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyList.swift; sourceTree = "<group>"; };
-		5D305D25293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseStudyScrollViewVStackForEach.swift; sourceTree = "<group>"; };
+		5D305D212932444500E42700 /* CaseStudyScrollViewStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyScrollViewStatic.swift; sourceTree = "<group>"; };
+		5D305D232932547F00E42700 /* CaseStudyListDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyListDynamic.swift; sourceTree = "<group>"; };
+		5D305D25293260BE00E42700 /* CaseStudyScrollViewDynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseStudyScrollViewDynamic.swift; sourceTree = "<group>"; };
 		5D305D27293260EC00E42700 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
 		5D305D29293266D000E42700 /* CaseStudyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyTabView.swift; sourceTree = "<group>"; };
 		5D60F904293FA5F400AE0726 /* CaseStudies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudies.swift; sourceTree = "<group>"; };
@@ -78,15 +78,15 @@
 				5D60F904293FA5F400AE0726 /* CaseStudies.swift */,
 				5D60F906293FA8D400AE0726 /* CaseStudyIfElse.swift */,
 				5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */,
-				5D305D232932547F00E42700 /* CaseStudyList.swift */,
+				5D305D232932547F00E42700 /* CaseStudyListDynamic.swift */,
+				5D0520B62934DC330080E4C0 /* CaseStudyListStatic.swift */,
 				5D60F93E293FBBE800AE0726 /* CaseStudyNavigationStack.swift */,
-				5D305D25293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift */,
-				5D305D212932444500E42700 /* CaseStudyScrollView.swift */,
-				5D0520B62934DC330080E4C0 /* CaseStudyStaticList.swift */,
+				5D305D25293260BE00E42700 /* CaseStudyScrollViewDynamic.swift */,
+				5D305D212932444500E42700 /* CaseStudyScrollViewStatic.swift */,
 				5D305D29293266D000E42700 /* CaseStudyTabView.swift */,
 				5D305D1F293240F300E42700 /* LifecycleMonitor.swift */,
-				5D305D27293260EC00E42700 /* SampleModel.swift */,
 				5D6C3F6D2908541100A0C864 /* RootView.swift */,
+				5D305D27293260EC00E42700 /* SampleModel.swift */,
 				5D6C3F6F2908541200A0C864 /* Assets.xcassets */,
 				5D6C3F712908541200A0C864 /* Entitlements.entitlements */,
 				5D6C3F722908541200A0C864 /* Preview Content */,
@@ -173,14 +173,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D0520B92934E6130080E4C0 /* CaseStudyLazyVGrid.swift in Sources */,
-				5D0520B72934DC330080E4C0 /* CaseStudyStaticList.swift in Sources */,
+				5D0520B72934DC330080E4C0 /* CaseStudyListStatic.swift in Sources */,
 				5D305D2A293266D000E42700 /* CaseStudyTabView.swift in Sources */,
 				5D305D28293260EC00E42700 /* SampleModel.swift in Sources */,
-				5D305D26293260BE00E42700 /* CaseStudyScrollViewVStackForEach.swift in Sources */,
+				5D305D26293260BE00E42700 /* CaseStudyScrollViewDynamic.swift in Sources */,
 				5D60F93F293FBBE800AE0726 /* CaseStudyNavigationStack.swift in Sources */,
 				5D60F907293FA8D400AE0726 /* CaseStudyIfElse.swift in Sources */,
-				5D305D222932444500E42700 /* CaseStudyScrollView.swift in Sources */,
-				5D305D242932547F00E42700 /* CaseStudyList.swift in Sources */,
+				5D305D222932444500E42700 /* CaseStudyScrollViewStatic.swift in Sources */,
+				5D305D242932547F00E42700 /* CaseStudyListDynamic.swift in Sources */,
 				5D305D20293240F300E42700 /* LifecycleMonitor.swift in Sources */,
 				5D6C3F6E2908541100A0C864 /* RootView.swift in Sources */,
 				5D60F905293FA5F400AE0726 /* CaseStudies.swift in Sources */,

@@ -55,14 +55,14 @@ struct MainContent: View {
         switch caseStudyID {
         case .ifElse:
             CaseStudyIfElse()
-        case .scrollView:
-            CaseStudyScrollView()
-        case .scrollViewVStackForEach:
-            CaseStudyScrollViewVStackForEach()
-        case .staticList:
-            CaseStudyStaticList()
-        case .list:
-            CaseStudyList()
+        case .scrollViewStatic:
+            CaseStudyScrollViewStatic()
+        case .scrollViewDynamic:
+            CaseStudyScrollViewDynamic()
+        case .listDynamic:
+            CaseStudyListDynamic()
+        case .listStatic:
+            CaseStudyListStatic()
         case .lazyVGrid:
             CaseStudyLazyVGrid()
         case .navigationStack:

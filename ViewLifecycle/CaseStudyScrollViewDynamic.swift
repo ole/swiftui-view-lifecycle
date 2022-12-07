@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CaseStudyScrollViewVStackForEach: View {
+struct CaseStudyScrollViewDynamic: View {
     private static let initialItemCount = 40
     @State private var items: [Item] = (1...Self.initialItemCount).map { i in
         Item(id: "Item \(i)")
@@ -56,7 +56,7 @@ struct CaseStudyScrollViewVStackForEach: View {
 struct CaseStudyScrollViewVStackForEach_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            CaseStudyScrollViewVStackForEach()
+            CaseStudyScrollViewDynamic()
         }
     }
 }

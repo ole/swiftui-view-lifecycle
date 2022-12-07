@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CaseStudyScrollView: View {
+struct CaseStudyScrollViewStatic: View {
     var body: some View {
         ScrollView {
             LifecycleMonitor(label: "ScrollView top")
@@ -27,6 +27,6 @@ struct CaseStudyScrollView: View {
 
 struct CaseStudyScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        CaseStudyScrollView()
+        CaseStudyScrollViewStatic()
     }
 }

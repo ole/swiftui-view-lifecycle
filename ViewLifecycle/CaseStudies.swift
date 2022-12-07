@@ -13,12 +13,12 @@ struct CaseStudy: Identifiable, Equatable {
 
     enum ID: CaseIterable {
         case ifElse
-        case scrollView
-        case scrollViewVStackForEach
-        case staticList
-        case list
         case lazyVGrid
+        case listDynamic
+        case listStatic
         case navigationStack
+        case scrollViewDynamic
+        case scrollViewStatic
         case tabView
     }
 }
@@ -35,9 +35,9 @@ let categories: [Category] = [
         id: "scrollview",
         label: "ScrollView",
         elements: [
-            CaseStudy(id: .scrollView, label: "ScrollView with static content"),
+            CaseStudy(id: .scrollViewStatic, label: "ScrollView with static content"),
             CaseStudy(
-                id: .scrollViewVStackForEach,
+                id: .scrollViewDynamic,
                 label: "ScrollView with dynamic content",
                 description: "A VStack with dynamic content, embedded in a ScrollView."
             ),
@@ -47,9 +47,9 @@ let categories: [Category] = [
         id: "list",
         label: "List",
         elements: [
-            CaseStudy(id: .list, label: "List with dynamic content"),
+            CaseStudy(id: .listDynamic, label: "List with dynamic content"),
             CaseStudy(
-                id: .staticList,
+                id: .listStatic,
                 label: "List with static content",
                 description: "A List with a bunch of hardcoded child views, not using ForEach."
             ),

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CaseStudyStaticList: View {
+struct CaseStudyListStatic: View {
     var body: some View {
         List {
             Group {
@@ -52,6 +52,6 @@ struct CaseStudyStaticList: View {
 
 struct CaseStudyStaticList_Previews: PreviewProvider {
     static var previews: some View {
-        CaseStudyStaticList()
+        CaseStudyListStatic()
     }
 }

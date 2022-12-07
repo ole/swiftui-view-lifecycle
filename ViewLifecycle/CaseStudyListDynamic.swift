@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CaseStudyList: View {
+struct CaseStudyListDynamic: View {
     private static let initialItemCount = 40
     @State private var items: [Item] = (1...Self.initialItemCount).map { i in
         Item(id: "Item \(i)")
@@ -46,7 +46,7 @@ struct CaseStudyList: View {
 struct CaseStudyList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            CaseStudyList()
+            CaseStudyListDynamic()
         }
     }
 }
