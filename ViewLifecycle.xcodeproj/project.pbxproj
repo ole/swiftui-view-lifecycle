@@ -22,6 +22,7 @@
 		5D6C3F6E2908541100A0C864 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6D2908541100A0C864 /* RootView.swift */; };
 		5D6C3F702908541200A0C864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C3F6F2908541200A0C864 /* Assets.xcassets */; };
 		5D6C3F742908541200A0C864 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C3F732908541200A0C864 /* Preview Assets.xcassets */; };
+		5D98162D294796AE00EA886F /* CaseStudyIDModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98162C294796AE00EA886F /* CaseStudyIDModifier.swift */; };
 		5DA368472941063B00E91959 /* CaseStudySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA368462941063B00E91959 /* CaseStudySwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		5D6C3F6F2908541200A0C864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D6C3F712908541200A0C864 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		5D6C3F732908541200A0C864 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D98162C294796AE00EA886F /* CaseStudyIDModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyIDModifier.swift; sourceTree = "<group>"; };
 		5DA368462941063B00E91959 /* CaseStudySwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudySwitch.swift; sourceTree = "<group>"; };
 		5DA368482941082900E91959 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		5DA36849294108CA00E91959 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				5D6C3F6B2908541100A0C864 /* App.swift */,
 				5D60F904293FA5F400AE0726 /* CaseStudies.swift */,
+				5D98162C294796AE00EA886F /* CaseStudyIDModifier.swift */,
 				5D60F906293FA8D400AE0726 /* CaseStudyIfElse.swift */,
 				5DA368462941063B00E91959 /* CaseStudySwitch.swift */,
 				5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */,
@@ -185,6 +188,7 @@
 				5D305D28293260EC00E42700 /* SampleModel.swift in Sources */,
 				5D305D26293260BE00E42700 /* CaseStudyScrollViewDynamic.swift in Sources */,
 				5D60F93F293FBBE800AE0726 /* CaseStudyNavigationStack.swift in Sources */,
+				5D98162D294796AE00EA886F /* CaseStudyIDModifier.swift in Sources */,
 				5D60F907293FA8D400AE0726 /* CaseStudyIfElse.swift in Sources */,
 				5DA368472941063B00E91959 /* CaseStudySwitch.swift in Sources */,
 				5D305D222932444500E42700 /* CaseStudyScrollViewStatic.swift in Sources */,

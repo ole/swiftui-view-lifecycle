@@ -12,6 +12,7 @@ struct CaseStudy: Identifiable, Equatable {
     var description: LocalizedStringKey?
 
     enum ID: CaseIterable {
+        case id
         case ifElse
         case lazyVGrid
         case listDynamic
@@ -31,6 +32,7 @@ let categories: [Category] = [
         elements: [
             CaseStudy(id: .ifElse, label: "if/else"),
             CaseStudy(id: .switch, label: "switch"),
+            CaseStudy(id: .id, label: "`.id(_:)`"),
         ]
     ),
     Category(
