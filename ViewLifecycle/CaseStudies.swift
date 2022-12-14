@@ -15,6 +15,7 @@ struct CaseStudy: Identifiable, Equatable {
         case id
         case ifElse
         case lazyVGrid
+        case lazyVStack
         case listDynamic
         case listStatic
         case navigationStack
@@ -63,6 +64,7 @@ let categories: [Category] = [
         id: "lazy",
         label: "Lazy containers",
         elements: [
+            CaseStudy(id: .lazyVStack, label: "LazyVStack"),
             CaseStudy(id: .lazyVGrid, label: "LazyVGrid"),
         ]
     ),

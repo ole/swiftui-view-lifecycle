@@ -67,6 +67,8 @@ struct MainContent: View {
             CaseStudyListDynamic()
         case .listStatic:
             CaseStudyListStatic()
+        case .lazyVStack:
+            CaseStudyLazyVStack()
         case .lazyVGrid:
             CaseStudyLazyVGrid()
         case .navigationStack:
