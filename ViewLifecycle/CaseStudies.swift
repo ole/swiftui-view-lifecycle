@@ -34,8 +34,8 @@ let categories: [Category] = [
         elements: [
             CaseStudy(id: .ifElse, label: "if/else"),
             CaseStudy(id: .switch, label: "switch"),
-            CaseStudy(id: .id, label: "`.id(_:)`"),
-            CaseStudy(id: .opacity, label: "`.opacity(_:)`")
+            CaseStudy(id: .id, label: ".id(_:)"),
+            CaseStudy(id: .opacity, label: ".opacity(_:)")
         ]
     ),
     Category(
