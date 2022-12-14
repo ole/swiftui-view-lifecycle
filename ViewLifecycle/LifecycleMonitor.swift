@@ -13,28 +13,26 @@ struct LifecycleMonitor: View {
             Text(label)
                 .font(.title3)
             Grid(horizontalSpacing: 16) {
-                GridRow {
+                GridRow(alignment: .firstTextBaseline) {
                     Text("@State")
                         .gridColumnAlignment(.leading)
-                    Text("\(stateTimestamp, style: .timer)")
+                    Text("\(stateTimestamp, style: .timer) ago")
                         .monospacedDigit()
                         .gridColumnAlignment(.leading)
                 }
-                GridRow {
+                GridRow(alignment: .firstTextBaseline) {
                     Text("onAppear")
                     Text(timestampLabel(for: onAppearTimestamp))
-                        .opacity(onAppearTimestamp == nil ? 0 : 1)
                         .monospacedDigit()
-                        .animation(.easeOut(duration: 1), value: onAppearTimestamp)
                 }
-                GridRow {
+                GridRow(alignment: .firstTextBaseline) {
                     Text("onDisappear")
                     Text(timestampLabel(for: onDisappearTimestamp))
                         .monospacedDigit()
-                        .animation(.easeOut(duration: 1), value: onDisappearTimestamp)
                 }
             }
             .font(.callout)
+            .lineSpacing(2)
         }
         .padding()
         .frame(maxWidth: .infinity)
@@ -45,18 +43,24 @@ struct LifecycleMonitor: View {
         .onAppear {
             let timestamp = Date.now
             print("\(timestamp) \(label): onAppear")
-            onAppearTimestamp = timestamp
+            let animation: Animation? = onAppearTimestamp == nil ? nil : .easeOut(duration: 1)
+            withAnimation(animation) {
+                onAppearTimestamp = timestamp
+            }
         }
         .onDisappear {
             let timestamp = Date.now
             print("\(timestamp) \(label): onDisappear")
-            onDisappearTimestamp = timestamp
+            let animation: Animation? = onDisappearTimestamp == nil ? nil : .easeOut(duration: 1)
+            withAnimation(animation) {
+                onDisappearTimestamp = timestamp
+            }
         }
     }
 
     private func timestampLabel(for timestamp: Date?) -> LocalizedStringKey {
         if let t = timestamp {
-            return "\(t, style: .timer)"
+            return "\(t, style: .timer) ago"
         } else {
             return "never"
         }
