@@ -25,6 +25,7 @@
 		5D98162D294796AE00EA886F /* CaseStudyIDModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98162C294796AE00EA886F /* CaseStudyIDModifier.swift */; };
 		5DA368472941063B00E91959 /* CaseStudySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA368462941063B00E91959 /* CaseStudySwitch.swift */; };
 		5DEE8421294A2A3A00BD2649 /* CaseStudyLazyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE8420294A2A3A00BD2649 /* CaseStudyLazyVStack.swift */; };
+		5DEE8423294A2BA700BD2649 /* CaseStudyOpacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEE8422294A2BA700BD2649 /* CaseStudyOpacity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5DA368482941082900E91959 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		5DA36849294108CA00E91959 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5DEE8420294A2A3A00BD2649 /* CaseStudyLazyVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyLazyVStack.swift; sourceTree = "<group>"; };
+		5DEE8422294A2BA700BD2649 /* CaseStudyOpacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyOpacity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,14 +90,15 @@
 				5D60F904293FA5F400AE0726 /* CaseStudies.swift */,
 				5D98162C294796AE00EA886F /* CaseStudyIDModifier.swift */,
 				5D60F906293FA8D400AE0726 /* CaseStudyIfElse.swift */,
-				5DA368462941063B00E91959 /* CaseStudySwitch.swift */,
 				5D0520B82934E6130080E4C0 /* CaseStudyLazyVGrid.swift */,
 				5DEE8420294A2A3A00BD2649 /* CaseStudyLazyVStack.swift */,
 				5D305D232932547F00E42700 /* CaseStudyListDynamic.swift */,
 				5D0520B62934DC330080E4C0 /* CaseStudyListStatic.swift */,
 				5D60F93E293FBBE800AE0726 /* CaseStudyNavigationStack.swift */,
+				5DEE8422294A2BA700BD2649 /* CaseStudyOpacity.swift */,
 				5D305D25293260BE00E42700 /* CaseStudyScrollViewDynamic.swift */,
 				5D305D212932444500E42700 /* CaseStudyScrollViewStatic.swift */,
+				5DA368462941063B00E91959 /* CaseStudySwitch.swift */,
 				5D305D29293266D000E42700 /* CaseStudyTabView.swift */,
 				5D305D1F293240F300E42700 /* LifecycleMonitor.swift */,
 				5D6C3F6D2908541100A0C864 /* RootView.swift */,
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D0520B92934E6130080E4C0 /* CaseStudyLazyVGrid.swift in Sources */,
+				5DEE8423294A2BA700BD2649 /* CaseStudyOpacity.swift in Sources */,
 				5D0520B72934DC330080E4C0 /* CaseStudyListStatic.swift in Sources */,
 				5D305D2A293266D000E42700 /* CaseStudyTabView.swift in Sources */,
 				5D305D28293260EC00E42700 /* SampleModel.swift in Sources */,
