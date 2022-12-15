@@ -32,7 +32,6 @@ struct LifecycleMonitor: View {
                 }
             }
             .font(.callout)
-            .lineSpacing(2)
         }
         .padding()
         .frame(maxWidth: .infinity)
