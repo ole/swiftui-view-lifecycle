@@ -1,13 +1,14 @@
 #  SwiftUI View Lifecycle
 
-<https://github.com/ole/swiftui-view-lifecycle>
-
 An iOS and macOS app that demonstrates how different SwiftUI constructs and SwiftUI container views affect:
 
 - the lifetime of `@State`
 - the firing of events such as `onAppear` and `onDisappear`
 
 By [Ole Begemann](https://oleb.net), 2022
+
+[SwiftUI View Lifecycle app on GitHub](https://github.com/ole/swiftui-view-lifecycle>)<br>
+My article introducing the app: [Understanding View Lifecycles (2022-12-15)](https://oleb.net/2022/swiftui-view-lifecycle/)
 
 ## Usage
 
