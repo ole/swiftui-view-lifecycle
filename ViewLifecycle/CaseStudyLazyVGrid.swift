@@ -9,7 +9,7 @@ struct CaseStudyLazyVGrid: View {
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [.init(.adaptive(minimum: 150))]) {
+            LazyVGrid(columns: [.init(.adaptive(minimum: 180), spacing: 0)]) {
                 ForEach(items) { item in
                     VStack(spacing: 4) {
                         LifecycleMonitor(label: item.id)
