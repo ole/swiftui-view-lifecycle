@@ -20,16 +20,21 @@ struct LifecycleMonitor: View {
                         .monospacedDigit()
                         .gridColumnAlignment(.leading)
                 }
+                .help("When the state (incl. @State and @StateObject) for this view was created")
+
                 GridRow(alignment: .firstTextBaseline) {
                     Text("onAppear")
                     Text(timestampLabel(for: onAppearTimestamp))
                         .monospacedDigit()
                 }
+                .help("When onAppear was last called for this view")
+
                 GridRow(alignment: .firstTextBaseline) {
                     Text("onDisappear")
                     Text(timestampLabel(for: onDisappearTimestamp))
                         .monospacedDigit()
                 }
+                .help("When onDisappear was last called for this view")
             }
             .font(.callout)
         }
