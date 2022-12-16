@@ -75,7 +75,7 @@ struct MainContent: View {
             CaseStudyLazyVGrid()
         case .navigationStack:
             #if os(macOS)
-                Text("SwiftUI on macOS 13.0 can’t seem to handle a NavigationStack nested in a NavigationSplitView. Please test this one on iOS.")
+                CaseStudyNavigationStackMac()
             #else
                 CaseStudyNavigationStack()
             #endif
