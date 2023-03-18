@@ -5,6 +5,7 @@ struct LifecycleMonitor: View {
     var label: String
     @State private var stateTimestamp: Date = .now
     @State private var onAppearTimestamp: Date? = nil
+    @State private var taskStartTimestamp: Date? = nil
     @State private var onDisappearTimestamp: Date? = nil
     @State private var color: Color = .random()
 
@@ -35,6 +36,14 @@ struct LifecycleMonitor: View {
                         .monospacedDigit()
                 }
                 .help("When onDisappear was last called for this view")
+
+                GridRow(alignment: .firstTextBaseline) {
+                    Text("task")
+                    Text(timestampLabel(for: taskStartTimestamp))
+                        .monospacedDigit()
+                }
+                .help("When task was last called for this view")
+
             }
             .font(.callout)
         }
@@ -58,6 +67,14 @@ struct LifecycleMonitor: View {
             let animation: Animation? = onDisappearTimestamp == nil ? nil : .easeOut(duration: 1)
             withAnimation(animation) {
                 onDisappearTimestamp = timestamp
+            }
+        }
+        .task {
+            let timestamp = Date.now
+            print("\(timestamp) \(label): task started")
+            let animation: Animation? = taskStartTimestamp == nil ? nil : .easeOut(duration: 1)
+            withAnimation(animation) {
+                taskStartTimestamp = timestamp
             }
         }
     }
